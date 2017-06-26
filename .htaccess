@@ -1,15 +1,15 @@
 <IfModule mod_deflate.c>
-	AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript
+    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript
 </IfModule>
 <IfModule mod_headers.c>
-	Header always set Strict-Transport-Security: "max-age=15768000; includeSubDomains"
-	Header always set Content-Security-Policy "default-src https: data: 'unsafe-inline' 'unsafe-eval'"
-	Header always set X-Frame-Options "SAMEORIGIN"
-	Header always set X-Xss-Protection "1; mode=block"
-	Header always set X-Content-Type-Options "nosniff"
-	Header always set Referrer-Policy "no-referrer"
+    Header always set Strict-Transport-Security: "max-age=15768000; includeSubDomains"
+    Header always set Content-Security-Policy "default-src https: data: 'unsafe-inline' 'unsafe-eval'"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Xss-Protection "1; mode=block"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "no-referrer"
 
-	# Serve gzip compressed CSS files if they exist
+    # Serve gzip compressed CSS files if they exist
     # and the client accepts gzip.
     RewriteCond "%{HTTP:Accept-encoding}" "gzip"
     RewriteCond "%{REQUEST_FILENAME}\.gz" -s
@@ -20,7 +20,6 @@
     RewriteCond "%{HTTP:Accept-encoding}" "gzip"
     RewriteCond "%{REQUEST_FILENAME}\.gz" -s
     RewriteRule "^(.*)\.js" "$1\.js\.gz" [QSA]
-
 
     # Serve correct content types, and prevent mod_deflate double gzip.
     RewriteRule "\.css\.gz$" "-" [T=text/css,E=no-gzip:1]
