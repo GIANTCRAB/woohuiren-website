@@ -3,14 +3,18 @@
 </IfModule>
 <IfModule mod_headers.c>
 	Header always set Strict-Transport-Security: "max-age=15768000; includeSubDomains"
-	
-	# Serve gzip compressed CSS files if they exist 
+	Header always set Content-Security-Policy "default-src https: data: 'unsafe-inline' 'unsafe-eval'"
+	Header always set X-Frame-Options "SAMEORIGIN"
+	Header always set X-Xss-Protection "1; mode=block"
+	Header always set X-Content-Type-Options "nosniff"
+
+	# Serve gzip compressed CSS files if they exist
     # and the client accepts gzip.
     RewriteCond "%{HTTP:Accept-encoding}" "gzip"
     RewriteCond "%{REQUEST_FILENAME}\.gz" -s
     RewriteRule "^(.*)\.css" "$1\.css\.gz" [QSA]
 
-    # Serve gzip compressed JS files if they exist 
+    # Serve gzip compressed JS files if they exist
     # and the client accepts gzip.
     RewriteCond "%{HTTP:Accept-encoding}" "gzip"
     RewriteCond "%{REQUEST_FILENAME}\.gz" -s
