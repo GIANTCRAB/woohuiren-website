@@ -1,43 +1,45 @@
 {
-  "name": "woohuiren-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GIANTCRAB/woohuiren-website.git"
-  },
-  "keywords": [
-    "website",
-    "personal",
-    "woohuiren"
-  ],
-  "author": "Huiren Woo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GIANTCRAB/woohuiren-website/issues"
-  },
-  "homepage": "https://github.com/GIANTCRAB/woohuiren-website#readme",
-  "devDependencies": {
-    "compression-webpack-plugin": "github:webpack/compression-webpack-plugin",
-    "css-loader": "github:webpack/css-loader",
-    "eslint": "^3.11.1",
-    "eslint-config-google": "^0.7.1",
-    "extract-text-webpack-plugin": "github:webpack/extract-text-webpack-plugin",
-    "file-loader": "github:webpack/file-loader",
-    "html-loader": "github:webpack/html-loader",
-    "image-webpack-loader": "github:tcoopman/image-webpack-loader",
-    "purify-css": "github:purifycss/purify-css",
-    "purifycss-webpack-plugin": "github:purifycss/purifycss-webpack-plugin",
-    "style-loader": "github:webpack/style-loader",
-    "url-loader": "github:webpack/url-loader",
-    "webpack": "github:webpack/webpack"
-  },
-  "dependencies": {
-    "lodash": "^4.17.2"
-  }
+    "name": "woohuiren-website",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --config webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GIANTCRAB/woohuiren-website.git"
+    },
+    "keywords": [
+        "website",
+        "personal",
+        "woohuiren"
+    ],
+    "author": "Huiren Woo",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/GIANTCRAB/woohuiren-website/issues"
+    },
+    "homepage": "https://github.com/GIANTCRAB/woohuiren-website#readme",
+    "devDependencies": {
+        "compression-webpack-plugin": "^0.4.0",
+        "css-loader": "github:webpack/css-loader",
+        "eslint": "^3.11.1",
+        "eslint-config-google": "^0.7.1",
+        "extract-text-webpack-plugin": "^2.1.2",
+        "file-loader": "^0.11.2",
+        "html-loader": "^0.4.5",
+        "image-webpack-loader": "^3.3.1",
+        "json-stable-stringify": "^1.0.1",
+        "path": "^0.12.7",
+        "purify-css": "^1.2.5",
+        "purifycss-webpack": "^0.7.0",
+        "style-loader": "^0.18.2",
+        "url-loader": "^0.5.9",
+        "webpack": "^3.0.0"
+    },
+    "dependencies": {
+        "lodash": "^4.17.2"
+    }
 }
